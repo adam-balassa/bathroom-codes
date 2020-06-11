@@ -5,4 +5,5 @@ import org.springframework.data.repository.CrudRepository
 
 interface BathroomCodesRepository: CrudRepository<BathroomCode, Int> {
     override fun findAll(): List<BathroomCode>
+    override fun <S : BathroomCode?> save(entity: S): S
 }
